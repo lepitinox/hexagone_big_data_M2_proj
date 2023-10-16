@@ -1,0 +1,10 @@
+{
+        "bootstrap.servers": "pkc-e0zxq.eu-west-3.aws.confluent.cloud:9092",
+        "security.protocol": "SASL_SSL",
+        "sasl.mechanism": "PLAIN",
+        "sasl.username": "AMAB3BHWI6GRT5G7",
+        "sasl.password": "sYISvWNpOyL8ge17685Rbq4G0lLgOVz+w1NHWtXmpUTZenOAjvigv6sSaroT7n2v",
+        "client.id": "ADRIEN",
+        "group.id": "python-group-1",
+        "auto.offset.reset": "earliest"
+}
