@@ -6,11 +6,7 @@ import os
 import dataikuapi
 from pathlib import Path
 import streamlit as st
-import time  # to simulate a real time data, time loop
 
-import numpy as np  # np mean, np random
-import pandas as pd  # read csv, df manipulation
-import plotly.express as px  # interactive charts
 
 client = dataikuapi.APINodeClient("https://api-56ce4d5f-779f448b-dku.eu-west-3.app.dataiku.io/", "AdriPI")
 load_dotenv()
@@ -40,7 +36,7 @@ def nulachier(values):
     prediction = client.predict_record("model_classifier", temp)
     ret = prediction["result"]
     print(f"expected: {expected}, got: {ret['prediction']}")
-    return ret
+    return ret,expected
 
 
 
@@ -64,7 +60,8 @@ try:
 
             print("doing int")
             res = nulachier(msg.value())
-            st.write(res)
+            st.write(res[0]['prediction'])
+            st.write(res[1])
 
 finally:
     # Close down consumer to commit final offsets.
