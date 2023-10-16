@@ -40,4 +40,19 @@
 - [ ] API deployment : Dataiku built-in API
 
 ### Infrastructure
-#### Infrastructure design
+#### Github 
+
+- [x] Github Actions
+- [x] Github Secrets
+#### Docker
+- [ ] Dockerfiles
+- [x] Docker Hub account
+#### Kafka
+- [x] Kafka cluster
+- [x] Kafka topic
+
+#### Python Code
+
+- [x] Python code for Producer
+- [x] Python code for Consumer
+- [ ] Python code for web app
