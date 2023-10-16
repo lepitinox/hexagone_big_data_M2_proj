@@ -1,22 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: myapp-deployment
+  name: webapp-deployment
   labels:
-    app: myapp
+    app: webapp
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: myapp
+      app: webapp
   template:
     metadata:
       labels:
-        app: myapp
+        app: webapp
     spec:
       containers:
-      - name: myapp
+      - name: webapp
         image: adrienducourthial/big_data_webapp:latest
-        imagePullPolicy: Never
         ports:
         - containerPort: 80

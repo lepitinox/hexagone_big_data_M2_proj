@@ -17,4 +17,3 @@ spec:
       containers:
       - name: data
         image: adrienducourthial/big_data_data:latest
-        imagePullPolicy: Never
