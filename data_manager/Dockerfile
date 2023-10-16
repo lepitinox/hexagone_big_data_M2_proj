@@ -1,10 +1,10 @@
 FROM python:3.9
 
 WORKDIR /app
-COPY main.py main.py
-COPY requirements.txt requirements.txt
-COPY ../.env .env
-COPY ../kafka_config.json kafka_config.json
+COPY data_manegement/main.py main.py
+COPY data_manegement/requirements.txt requirements.txt
+COPY .env .env
+COPY kafka_config.json kafka_config.json
 
 RUN pip install -r requirements.txt
 
