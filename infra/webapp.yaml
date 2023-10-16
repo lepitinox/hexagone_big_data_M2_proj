@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: myapp
-        image: myapp:latest
+        image: adrienducourthial/big_data_webapp:latest
         imagePullPolicy: Never
         ports:
         - containerPort: 80

@@ -1,22 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: myapp-deployment
+  name: data-deployment
   labels:
-    app: myapp
+    app: data
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: myapp
+      app: data
   template:
     metadata:
       labels:
-        app: myapp
+        app: data
     spec:
       containers:
-      - name: myapp
-        image: myapp:latest
+      - name: data
+        image: adrienducourthial/big_data_data:latest
         imagePullPolicy: Never
-        ports:
-        - containerPort: 80
