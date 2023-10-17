@@ -37,3 +37,11 @@ jobs:
         file: ./webapp/Dockerfile
         push: true
         tags:  ${{ secrets.DOCKERHUB_USERNAME }}/big_data_webapp:latest
+
+    - name: Build and Push Docker image for backend
+      uses: docker/build-push-action@v2
+      with:
+        context: .
+        file: ./backend/Dockerfile
+        push: true
+        tags:  ${{ secrets.DOCKERHUB_USERNAME }}/big_data_backend:latest

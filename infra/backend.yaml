@@ -1,27 +1,25 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: webapp-deployment
+  name: backend-deployment
   labels:
-    app: webapp
+    app: backend
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: webapp
+      app: backend
   template:
     metadata:
       labels:
-        app: webapp
+        app: backend
     spec:
       containers:
-      - name: webapp
+      - name: backend
         volumeMounts:
           - mountPath: /data
             name: v-name
-        image: adrienducourthial/big_data_webapp:latest
-        ports:
-        - containerPort: 80
+        image: adrienducourthial/big_data_backend:latest
       volumes:
         - name: v-name
           persistentVolumeClaim:
