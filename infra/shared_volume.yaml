@@ -23,18 +23,3 @@ spec:
   resources:
     requests:
       storage: 1Gi
----
-apiVersion: apps/v1
-kind: Deployment
-spec:
-  template:
-    spec:
-      containers:
-        - name: p-name
-          volumeMounts:
-            - mountPath: /data
-              name: v-name
-      volumes:
-        - name: v-name
-          persistentVolumeClaim:
-            claimName: pvc-name
