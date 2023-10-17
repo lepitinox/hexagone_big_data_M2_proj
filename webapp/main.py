@@ -1,4 +1,4 @@
-
+import time
 import streamlit as st
 import pandas as pd
 
@@ -14,3 +14,4 @@ while True:
     dff = pd.read_csv("/data/dataset.csv")
     test.dataframe(dff.style.apply(is_good, axis=1))
     pct.write(f"Percentage of good predictions: {dff['good_prediction'].mean() * 100:.2f}%")
+    time.sleep(2)

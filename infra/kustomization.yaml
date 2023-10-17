@@ -3,6 +3,7 @@ kind: Kustomization
 
 resources:
   - shared_volume.yaml
+  - backend.yaml
   - data.yaml
   - webapp.yaml
   - service.yaml
